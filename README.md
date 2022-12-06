@@ -1,8 +1,7 @@
 # Restaurante
 Programa desenvolvido para ajudar o restaurante BORALA a alavancar suas vendas pós pandemia (coronavírus)
 
-A estratégia é:
--Ofertar descontos progressivos aos clientes dependendo:
+A estratégia é ofertar descontos progressivos aos clientes dependendo:
   * do número de pratos principais comprados
   * do valor total do pedido
   * se tem cupom de desconto válido
