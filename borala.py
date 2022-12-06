@@ -209,3 +209,35 @@ if cupom == "S":
                     print(f"Número de pessoas: {qtdPessoas}")
                     print("----------------------------------------------")
                     
+# Desconto visita
+elif cupom == "N":
+    visita = input("É a primeira vez do cliente no restaurante?: ")
+    if visita == "S":
+        descVisita = valorTotal - (5/100)
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descVisita}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa {descVisita / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descVisita}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
+    else:
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: 0")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa: {valorTotal / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: 0")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
