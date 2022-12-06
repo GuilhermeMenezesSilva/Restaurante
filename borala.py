@@ -69,3 +69,67 @@ else:
             print(f"Número de pessoas: {qtdPessoas}")
             print("----------------------------------------------")
 
+# Desconto pratos
+qntdPrato = int(input("Qual a quantidade de pratos principais pedidos?: "))
+if qntdPrato >= 3:
+    descPrato = valorTotal - (4/100)
+    if racharConta == "S":
+        print("----------------------------------------------")
+        print(f"Valor total da nota fiscal: {valorTotal}")
+        print(f"Valor total da nota com desconto: {descPrato}")
+        print(f"Número de pessoas: {qtdPessoas}")
+        print(f"Total por pessoa {descPrato / qtdPessoas}")
+        print("----------------------------------------------")
+    elif racharConta == "N":
+        print("----------------------------------------------")
+        print(f"Valor total da nota fiscal: {valorTotal}")
+        print(f"Valor total da nota com desconto: {descPrato}")
+        print(f"Número de pessoas: {qtdPessoas}")
+        print("----------------------------------------------")
+elif qntdPrato >= 1:
+    if racharConta == "S":
+        print("----------------------------------------------")
+        print(f"Valor total da nota fiscal: {valorTotal}")
+        print(f"Valor total da nota com desconto: 0")
+        print(f"Número de pessoas: {qtdPessoas}")
+        print(f"Total por pessoa: {valorTotal / qtdPessoas}")
+        print("----------------------------------------------")
+    elif racharConta == "N":
+        print("----------------------------------------------")
+        print(f"Valor total da nota fiscal: {valorTotal}")
+        print(f"Valor total da nota com desconto: 0")
+        print(f"Número de pessoas: {qtdPessoas}")
+        print("----------------------------------------------")
+else:
+    print("Número de pratos principais inválido. Digite novamente")
+    qntdPrato = int(input("Qual a quantidade de pratos principais pedidos?: "))
+    if qntdPrato >= 3:
+        descPrato = valorTotal - (4/100)
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descPrato}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa {descPrato / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descPrato}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
+    elif qntdPrato >= 1:
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: 0")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa: {valorTotal / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: 0")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
+
