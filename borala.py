@@ -5,7 +5,7 @@ print(f"Tabela de desconto: \n Se o cliente comprar mais que 3 pratos principais
 qtdPessoas = int(input("Digite a quantidade de pessoas: "))
 racharConta = input("O cliente deseja rachar a conta?: ")
 
-# Desconto nota
+#Desconto nota
 valorTotal = float(input("Digite o valor total da nota fiscal: "))
 if valorTotal >= 500:
     descNota = valorTotal - (6/100)
@@ -69,7 +69,7 @@ else:
             print(f"Número de pessoas: {qtdPessoas}")
             print("----------------------------------------------")
 
-# Desconto pratos
+#Desconto pratos
 qntdPrato = int(input("Qual a quantidade de pratos principais pedidos?: "))
 if qntdPrato >= 3:
     descPrato = valorTotal - (4/100)
@@ -133,3 +133,79 @@ else:
             print(f"Número de pessoas: {qtdPessoas}")
             print("----------------------------------------------")
 
+# Desconto com cupom
+cupom = input("Cliente possui cumpom de desconto? (S/N): ")
+if cupom == "S":
+    digiCupom = input("Digite o nome do cupom")
+
+    #Cupom BORALA10
+    if  digiCupom == "BORALA10":
+        descCupom10 = valorTotal - (10/100)
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descCupom10}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa {descCupom10 / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descCupom10}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
+
+    #Cumpom BORALA5
+    elif digiCupom == "BORALA5":
+        descCupom5 = valorTotal - (5/100)
+        if racharConta == "S":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descCupom5}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print(f"Total por pessoa {descCupom5 / qtdPessoas}")
+            print("----------------------------------------------")
+        elif racharConta == "N":
+            print("----------------------------------------------")
+            print(f"Valor total da nota fiscal: {valorTotal}")
+            print(f"Valor total da nota com desconto: {descCupom5}")
+            print(f"Número de pessoas: {qtdPessoas}")
+            print("----------------------------------------------")
+    else:
+        print("Cupom Inválido. Digite novamente")
+        cupom = input("Cliente possui cumpom de desconto? (S/N): ")
+        if cupom == "S":
+            digiCupom = input("Digite o nome do cupom")
+
+            if  digiCupom == "BORALA10":
+                descCupom10 = valorTotal - (10/100)
+                if racharConta == "S":
+                    print("----------------------------------------------")
+                    print(f"Valor total da nota fiscal: {valorTotal}")
+                    print(f"Valor total da nota com desconto: {descCupom10}")
+                    print(f"Número de pessoas: {qtdPessoas}")
+                    print(f"Total por pessoa {descCupom10 / qtdPessoas}")
+                    print("----------------------------------------------")
+                elif racharConta == "N":
+                    print("----------------------------------------------")
+                    print(f"Valor total da nota fiscal: {valorTotal}")
+                    print(f"Valor total da nota com desconto: {descCupom10}")
+                    print(f"Número de pessoas: {qtdPessoas}")
+                    print("----------------------------------------------")
+
+            elif digiCupom == "BORALA5":
+                descCupom5 = valorTotal - (5/100)
+                if racharConta == "S":
+                    print("----------------------------------------------")
+                    print(f"Valor total da nota fiscal: {valorTotal}")
+                    print(f"Valor total da nota com desconto: {descCupom5}")
+                    print(f"Número de pessoas: {qtdPessoas}")
+                    print(f"Total por pessoa {descCupom5 / qtdPessoas}")
+                    print("----------------------------------------------")
+                elif racharConta == "N":
+                    print("----------------------------------------------")
+                    print(f"Valor total da nota fiscal: {valorTotal}")
+                    print(f"Valor total da nota com desconto: {descCupom5}")
+                    print(f"Número de pessoas: {qtdPessoas}")
+                    print("----------------------------------------------")
+                    
